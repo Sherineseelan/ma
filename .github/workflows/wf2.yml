@@ -23,5 +23,5 @@ jobs:
         ssh -o StrictHostKeyChecking=no ec2-user@43.205.235.43 << EOF
         sudo su
         docker pull ${{ secrets.DOC_USERNAME }}/nager:g1
-        docker run -p 80:80 -d ${{ secrets.DOC_USERNAME }}/nager:g1
+        docker run -p 8080:80 -d ${{ secrets.DOC_USERNAME }}/nager:g1
         EOF
