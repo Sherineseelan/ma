@@ -22,6 +22,6 @@ jobs:
         chmod 600 ~/.ssh/id_rsa
         ssh -o StrictHostKeyChecking=no ec2-user@43.205.235.43 << EOF
         sudo su
-        docker pull ${{ secrets.DOC_USERNAME }}/test:aio
+        docker pull ${{ secrets.DOC_USERNAME }}/nager:g1
         docker run -p 80:80 -d ${{ secrets.DOC_USERNAME }}/nager:g1
         EOF
